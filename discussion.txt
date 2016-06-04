@@ -9,8 +9,57 @@ A: Without a base case, the recursion would go on indefinitely, or until your sy
 Graphs
 
 1. What is a Graph?
-A: 
+A: A graph is a data structure with nodes that are linked to other nodes via edges and can contain cycles.
 2. How is a Graph different from a Tree?
-A:
-3. Give an example of somthing that would be good to model with a Graph.
-A: 
+A: A tree has a distinct hierarchy with children whereas a graph can be cyclical and non-directed
+3. Give an example of something that would be good to model with a Graph.
+A: Friend groups
+
+Performance of Different Data Structures
+
+Python list Add L: O(n) - when adding to beginning, have to shift index of every item after
+Python list Pop L: O(n) - when popping from beginning, have to shift index of every item adter
+Python list Pop R: O(1) - can go straight to end because it knows how many items are in array, and just take the last one off without affecting other items
+Linked List Index: O(n) - assuming worst case of indexing last item, have to start at the beginning, keep track of index and count all the way to the number of the given index
+Linked List Search: O(n) - have to go through entire list and check each item to see if the data is the input data
+Linked List Add R: O(1) - if you're keeping track of the tail, you can just go straight to the tail, set tail.next as new node, and set new node as ll.tail
+Linked List Add L: O(1) - just go to head, set node.next as head and then set ll.head to new node
+Linked List Pop L: O(1) - go to head, set head to head.next
+Linked List Pop R: O(n) - have to go through list to the end to find node that points to the tail, reassign tail to that node, assign tail.next to None
+Double Linked List Index: O(n) - go through entire list keeping track of index and stopping when index becomes input index
+DLL search: O(n) - have to go through entire list and check each item to see if the data is the input data
+DLL Add R: O(1) same as LL
+DLL Add L: O(1) same as LL
+DLL Pop L: O(1) same as LL
+DLL Pop R: O(1) - because we are also keeping track of node.prev, we can go straight to tail, look at tail.prev, reassign tail to tail.prev and reassign tail.next to None
+Queue as Array Add R: O(1) - we know length, so just add item to end and update length
+Queue as Array Pop L: O(n) - have to shift index down of remaining items if we're using an array
+Queue as LL Add R: O(1) - know the tail, so just update tail
+Queue as LL Pop L: O(1) - know the head, so just update head
+Stack Add R: O(1) - no matter what, can jump straight to end and add an item
+Stack Pop R: O(1) - know the length or tail, can go straight to end and remove the item
+
+
+Fill in Runtime and Memory:
+
+Set: get - O(1)  add - O(1) delete - O(1)  iterate - O(n)  memory -  medium/requires some extra space for potential additions
+Binary search tree: get - O(log(n)) add - refactor/O(n) delete - refactor/O(n) iterate - O(1) memory - a little/takes up only as much space as it needs
+Tree: get - O(n) add - O(1) delete - O(1) iterate - O(1) memorty - a little
+
+Sorting
+1. Describe in words how the Bubble Sort algorithm works.
+A: Go through list comparing item to next item in list and flipping them until you get ot the end. Then do this again as many times as is the length of the list so that all items are sorted.
+2. Describe in words how the Merge Sort algorithm works.
+A: Go through list of items recursively breaking it in half until you get a list with only 1 item. Compare this list to another list with one item and shift position depending which is higher coming back out of the call stack.
+3. Describe in words how the Quick Sort algorithm works.
+A: Using a random pivot, all of the items around the pivot are pushed to left or right, so pivot is in the right place. Then choosing a random pivot on one side of original pivot, items are pushed to left or right until pivot is in right place. Continue doing this until all items are sorted.
+
+Git Branching
+
+1. Give an instance when you would use git branching.
+A: when you want to test out a feature while leaving the original code in tact
+2. What is a pull request?
+A: When you want to push your changes to a branch that you do not own, you request that master pull your branched code in.
+
+
+
