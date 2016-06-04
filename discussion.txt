@@ -1,0 +1,16 @@
+Recursion
+
+1. In your own words, what is Recursion?
+A: Recursion is when a function calls itself when a particular base case is not met, so a new call of the function is added to the call stack until the base case is met.
+
+2. Why is it necessary to have a Base Case?
+A: Without a base case, the recursion would go on indefinitely, or until your system stops the recursion at the point of Stack Overflow. Base cases tell you the condition of when to stop recursing so that you can break out of the recursion and come back up the call stack.
+
+Graphs
+
+1. What is a Graph?
+A: 
+2. How is a Graph different from a Tree?
+A:
+3. Give an example of somthing that would be good to model with a Graph.
+A: 
