@@ -98,7 +98,9 @@ def num_nodes(tree):
     count = 1
 
     for child in tree.children:
-        return count + num_nodes(child)
+        count = count + num_nodes(child)
+
+    return count
 
 #####################################################################
 # END OF ASSIGNMENT: You can ignore everything below.
